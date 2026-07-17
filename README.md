@@ -1,15 +1,6 @@
 # ML Engineer Interview Prep — 6-Month Roadmap
 
-**Calibration:** You have theoretical knowledge but no industry ML experience — closest to a strong new-grad / career-switcher profile. I'm assuming a **3–4 hrs/day** pace and a **general ML Engineer** target (the broad FAANG/scale-up style role that covers classical ML → DL → LLMs → MLOps → system design). Adjust the weekly load up or down as needed — the topic list itself should not be cut.
-
-This plan runs **4 parallel tracks** every month instead of one topic at a time, because that's how interviews actually test you — a mix of theory, coding, system design and communication, all at once, and skills decay if you drop a track for 4 weeks straight.
-
-| Track | What it covers | Intensity over time |
-|---|---|---|
-| **A — Core ML/DL/GenAI** | The month's main theme (math → classical ML → DL → NLP/LLMs → MLOps) | Heavy months 1–5, light review in month 6 |
-| **B — Coding/DSA** | LeetCode-style + ML-specific coding (implement algorithms from scratch) | Steady from week 1, never drops to zero |
-| **C — ML System Design** | Frameworks + case studies | Starts month 3, ramps hard in months 5–6 |
-| **D — Behavioral/Communication** | STAR stories, ML-specific behavioral, negotiation | Light and ongoing, intensive in month 6 |
+**e-book:** ```https://drive.google.com/drive/folders/1WHZhPslFVO9n-icyYU84IsZCKyqm2e1N?usp=drive_link```
 
 ---
 
