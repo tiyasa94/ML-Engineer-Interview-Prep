@@ -1,0 +1,4 @@
+# Python dependencies for the mathematical foundations notebooks
+numpy
+matplotlib
+scipy
