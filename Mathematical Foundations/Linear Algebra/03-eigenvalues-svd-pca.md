@@ -2,7 +2,7 @@
 
 **The single highest-interview-yield file in this chapter.** If you only have time to deeply master one linear algebra topic, make it this one.
 
-**Companion code:** [`03-eigenvalues-svd-pca.py`](./03-eigenvalues-svd-pca.py)
+**Companion code:** [`03-eigenvalues-svd-pca.ipynb`](./03-eigenvalues-svd-pca.ipynb)
 **Book reference:** *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) (https://drive.google.com/file/d/1KsG9bntb0vD9QrUvHrlR2vqBQSr_V0J9/view) - §4.1–4.6, pp.99–134 (Determinant and Trace, Eigenvalues and Eigenvectors, Cholesky Decomposition, Eigendecomposition and Diagonalization, Singular Value Decomposition, Matrix Approximation)
 
 ---

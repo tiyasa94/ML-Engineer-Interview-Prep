@@ -1,6 +1,6 @@
 # 02 - Norms, Inner Products & Projections
 
-**Companion code:** [`02-norms-inner-products-projections.py`](./02-norms-inner-products-projections.py)
+**Companion code:** [`02-norms-inner-products-projections.ipynb`](./02-norms-inner-products-projections.ipynb)
 **Book reference:** *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) (https://drive.google.com/file/d/1KsG9bntb0vD9QrUvHrlR2vqBQSr_V0J9/view) - §3.1–3.8, pp.71–90 (Norms, Inner Products, Lengths and Distances, Angles and Orthogonality, Orthonormal Basis, Orthogonal Complement, Inner Product of Functions, Orthogonal Projections)
 
 ---
