@@ -1,19 +1,19 @@
-# 01 — Differentiation, Gradients & Jacobians
+# 01 - Differentiation, Gradients & Jacobians
 
 **Companion notebook:** [`01-differentiation-gradients-jacobians.ipynb`](./01-differentiation-gradients-jacobians.ipynb)
-**Book reference:** *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) — §5.1–5.4, pp.141–157 (Differentiation of Univariate Functions, Partial Differentiation and Gradients, Gradients of Vector-Valued Functions, Gradients of Matrices)
+**Book reference:** *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) - §5.1–5.4, pp.141–157 (Differentiation of Univariate Functions, Partial Differentiation and Gradients, Gradients of Vector-Valued Functions, Gradients of Matrices)
 
 ---
 
 ## The derivative is just a slope
 
-`f'(x)` is the slope of the tangent line to `f` at `x` — the limit of the slope of a secant line as the two points it connects get infinitely close:
+`f'(x)` is the slope of the tangent line to `f` at `x` - the limit of the slope of a secant line as the two points it connects get infinitely close:
 
 ```
 f'(x) = lim_{h->0} [f(x+h) - f(x)] / h
 ```
 
-Everything else in this chapter — gradients, Jacobians, backprop — is this same idea, generalized to more inputs and outputs.
+Everything else in this chapter - gradients, Jacobians, backprop - is this same idea, generalized to more inputs and outputs.
 
 ![Derivative as the slope of the tangent line](./figures/tangent_line.png)
 
@@ -25,7 +25,7 @@ For a function of several variables, `f(x, y)`, the **partial derivative** `∂f
 ∇f = [∂f/∂x1, ∂f/∂x2, ..., ∂f/∂xn]
 ```
 
-The gradient has a crucial geometric property: **it always points in the direction of steepest ascent, and it's always perpendicular to the contour lines of `f`.** That single fact is the entire justification for gradient *descent* — step in the direction opposite the gradient to decrease the function fastest.
+The gradient has a crucial geometric property: **it always points in the direction of steepest ascent, and it's always perpendicular to the contour lines of `f`.** That single fact is the entire justification for gradient *descent* - step in the direction opposite the gradient to decrease the function fastest.
 
 ![Gradient field, perpendicular to contour lines](./figures/gradient_field.png)
 
@@ -39,7 +39,7 @@ For linear regression, `L(w) = (1/n)‖Xw - y‖²`. Using the chain rule (more 
 ∂L/∂w = (2/n) · Xᵀ(Xw - y)
 ```
 
-The companion notebook verifies this analytic gradient against a **numerical gradient** (finite differences) — this "gradient check" technique is exactly what you'd do to sanity-check a backprop implementation, and it's a legitimate thing to mention in an interview if asked how you'd debug a suspicious gradient:
+The companion notebook verifies this analytic gradient against a **numerical gradient** (finite differences) - this "gradient check" technique is exactly what you'd do to sanity-check a backprop implementation, and it's a legitimate thing to mention in an interview if asked how you'd debug a suspicious gradient:
 
 ```python
 def numerical_gradient(f, w, eps=1e-5):
@@ -52,17 +52,17 @@ def numerical_gradient(f, w, eps=1e-5):
     return grad
 ```
 
-Running it: the analytic and numerical gradients agree to about `1e-11` — confirming the hand-derived formula is correct.
+Running it: the analytic and numerical gradients agree to about `1e-11` - confirming the hand-derived formula is correct.
 
 ## Jacobians: the gradient's generalization to vector-valued functions
 
-A **gradient** is defined for a scalar-valued function (one output). A **Jacobian** generalizes this to a *vector*-valued function `f: Rⁿ → Rᵐ` — it's the `m × n` matrix of all partial derivatives, one row per output, one column per input:
+A **gradient** is defined for a scalar-valued function (one output). A **Jacobian** generalizes this to a *vector*-valued function `f: Rⁿ → Rᵐ` - it's the `m × n` matrix of all partial derivatives, one row per output, one column per input:
 
 ```
 J[i, j] = ∂f_i / ∂x_j
 ```
 
-A gradient is just a Jacobian with a single row (`m = 1`). This distinction matters because every layer of a neural network is a vector-valued function (many inputs, many outputs), so backpropagation is really chaining Jacobians together, not just chaining scalar derivatives — that's the subject of the next notebook.
+A gradient is just a Jacobian with a single row (`m = 1`). This distinction matters because every layer of a neural network is a vector-valued function (many inputs, many outputs), so backpropagation is really chaining Jacobians together, not just chaining scalar derivatives - that's the subject of the next notebook.
 
 ---
 

@@ -1,7 +1,7 @@
-# 03 — Optimization: Gradient Descent, Convexity & Constrained Optimization
+# 03 - Optimization: Gradient Descent, Convexity & Constrained Optimization
 
 **Companion notebook:** [`03-optimization-gradient-descent-convexity.ipynb`](./03-optimization-gradient-descent-convexity.ipynb)
-**Book reference:** *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) — §7.1–7.3, pp.227–246 (Optimization Using Gradient Descent, Constrained Optimization and Lagrange Multipliers, Convex Optimization)
+**Book reference:** *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) - §7.1–7.3, pp.227–246 (Optimization Using Gradient Descent, Constrained Optimization and Lagrange Multipliers, Convex Optimization)
 
 ---
 
@@ -17,31 +17,31 @@ The learning rate `lr` controls step size, and it's the single most consequentia
 
 ![Gradient descent trajectories for three learning rates](./figures/gd_trajectories.png)
 
-Green (`lr=0.05`) crawls toward the minimum — stable but wastes steps. Blue (`lr=0.3`) converges cleanly in just a few steps. Red (`lr=0.55`) overshoots on every step and diverges outright along the steeper `y` direction.
+Green (`lr=0.05`) crawls toward the minimum - stable but wastes steps. Blue (`lr=0.3`) converges cleanly in just a few steps. Red (`lr=0.55`) overshoots on every step and diverges outright along the steeper `y` direction.
 
-This isn't just a toy example — the exact instability you see for the red trajectory (`lr` too large relative to the curvature of the loss surface) is why training loss occasionally spikes to `NaN` with too-aggressive learning rates, and it's the mechanical reason learning rate warmup and schedules exist: start small while the loss surface is poorly understood, increase once training stabilizes, then decay as you approach the minimum and want to stop overshooting it.
+This isn't just a toy example - the exact instability you see for the red trajectory (`lr` too large relative to the curvature of the loss surface) is why training loss occasionally spikes to `NaN` with too-aggressive learning rates, and it's the mechanical reason learning rate warmup and schedules exist: start small while the loss surface is poorly understood, increase once training stabilizes, then decay as you approach the minimum and want to stop overshooting it.
 
-**Momentum and Adam, briefly:** plain SGD uses only the current gradient. Momentum adds a running average of past gradients (dampens oscillation in high-curvature directions, like the red trajectory above). Adam additionally adapts the effective learning rate per-parameter based on the recent magnitude of that parameter's gradients — both are, at their core, still trying to solve exactly the instability shown above, just more cleverly than a fixed global learning rate.
+**Momentum and Adam, briefly:** plain SGD uses only the current gradient. Momentum adds a running average of past gradients (dampens oscillation in high-curvature directions, like the red trajectory above). Adam additionally adapts the effective learning rate per-parameter based on the recent magnitude of that parameter's gradients - both are, at their core, still trying to solve exactly the instability shown above, just more cleverly than a fixed global learning rate.
 
 ## Convexity: the property that makes "gradient descent finds the optimum" a guarantee
 
-A function is **convex** if the line segment between any two points on its graph lies above (or on) the graph — equivalently, its curvature never bends the "wrong way." The huge practical consequence: **for a convex function, any local minimum is automatically the global minimum.**
+A function is **convex** if the line segment between any two points on its graph lies above (or on) the graph - equivalently, its curvature never bends the "wrong way." The huge practical consequence: **for a convex function, any local minimum is automatically the global minimum.**
 
 ![Convex vs. non-convex loss landscapes](./figures/convex_vs_nonconvex.png)
 
-Linear regression and logistic regression have convex loss surfaces — that's why their "solve to convergence" behavior is so reliable. **Neural network loss surfaces are almost never convex.** In high dimensions, though, the practically dominant obstacle isn't usually "bad" local minima (most local minima in an overparameterized network turn out to be nearly as good as the global one) — it's **saddle points**, where the gradient is zero but the point is a minimum along some directions and a maximum along others. This is one of the more nuanced, senior-level interview points: "why doesn't non-convexity doom deep learning in practice?"
+Linear regression and logistic regression have convex loss surfaces - that's why their "solve to convergence" behavior is so reliable. **Neural network loss surfaces are almost never convex.** In high dimensions, though, the practically dominant obstacle isn't usually "bad" local minima (most local minima in an overparameterized network turn out to be nearly as good as the global one) - it's **saddle points**, where the gradient is zero but the point is a minimum along some directions and a maximum along others. This is one of the more nuanced, senior-level interview points: "why doesn't non-convexity doom deep learning in practice?"
 
 ## Constrained optimization and Lagrange multipliers
 
-Sometimes you don't want to minimize `f(x)` freely — you want to minimize it *subject to* a constraint, `g(x) = 0`. The classic method: introduce a **Lagrange multiplier** `λ` and optimize the Lagrangian `L(x, λ) = f(x) - λg(x)`.
+Sometimes you don't want to minimize `f(x)` freely - you want to minimize it *subject to* a constraint, `g(x) = 0`. The classic method: introduce a **Lagrange multiplier** `λ` and optimize the Lagrangian `L(x, λ) = f(x) - λg(x)`.
 
-The key geometric insight: **at the constrained optimum, the gradient of `f` is parallel to the gradient of the constraint `g`.** If they weren't parallel, you could slide along the constraint surface and keep decreasing `f` further — so parallel gradients is precisely the "can't improve any further while staying on the constraint" condition.
+The key geometric insight: **at the constrained optimum, the gradient of `f` is parallel to the gradient of the constraint `g`.** If they weren't parallel, you could slide along the constraint surface and keep decreasing `f` further - so parallel gradients is precisely the "can't improve any further while staying on the constraint" condition.
 
 ![Lagrange multiplier geometric intuition](./figures/lagrange_multipliers.png)
 
-The black dot is the closest point on the constraint line to the origin (the unconstrained minimum of `x²+y²`). At that point, `∇f` (red) and `∇g` (purple, the constraint's gradient — always perpendicular to the constraint line) point in exactly the same direction. That parallelism condition, `∇f = λ∇g`, is the Lagrange multiplier equation.
+The black dot is the closest point on the constraint line to the origin (the unconstrained minimum of `x²+y²`). At that point, `∇f` (red) and `∇g` (purple, the constraint's gradient - always perpendicular to the constraint line) point in exactly the same direction. That parallelism condition, `∇f = λ∇g`, is the Lagrange multiplier equation.
 
-**Why this matters for ML interviews specifically:** the derivation of the **SVM dual problem** goes through exactly this machinery (constrained optimization with inequality constraints, generalized via KKT conditions — the inequality-constraint extension of Lagrange multipliers). If you've ever wondered where the "support vectors" and the dual formulation in SVMs actually come from mathematically, this is it.
+**Why this matters for ML interviews specifically:** the derivation of the **SVM dual problem** goes through exactly this machinery (constrained optimization with inequality constraints, generalized via KKT conditions - the inequality-constraint extension of Lagrange multipliers). If you've ever wondered where the "support vectors" and the dual formulation in SVMs actually come from mathematically, this is it.
 
 ---
 
@@ -53,4 +53,4 @@ The black dot is the closest point on the constraint line to the origin (the unc
 - [ ] I can explain why saddle points, not bad local minima, are the more relevant obstacle in deep learning
 - [ ] I can state the geometric intuition behind Lagrange multipliers (∇f parallel to ∇g at the constrained optimum)
 
-This closes out the Calculus subchapter. Next up: **Statistics** (probability, Bayes' theorem, MLE/MAP, hypothesis testing) — the third area from the original roadmap.
+This closes out the Calculus subchapter. Next up: **Statistics** (probability, Bayes' theorem, MLE/MAP, hypothesis testing) - the third area from the original roadmap.
