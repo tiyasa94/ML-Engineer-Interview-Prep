@@ -8,6 +8,7 @@ A 6-month, project-based prep repo for ML Engineer interviews in the current job
 - [x] **Mathematics**  ✅
 - [x] **Python** ✅
 - [x] **Statistics** ✅
+- [ ] SQL
 - [ ] Classical ML - regression, tree ensembles, SVMs, clustering, feature engineering
 - [ ] Deep Learning - neural nets from scratch, CNNs, RNNs, training dynamics
 - [ ] MLOps & Deployment - serving, monitoring, CI/CD, distributed training
