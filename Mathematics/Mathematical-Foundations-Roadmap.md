@@ -12,7 +12,6 @@ This chapter is **complete** — 5 subchapters, 15 topics, each a paired `.md` +
 
 - [x] Linear Algebra
 - [x] Calculus
-- [x] Statistics
 - [x] Information Theory
 - [x] Advanced Optimization & Numerical Methods
 
@@ -66,14 +65,7 @@ The file tree sorts alphabetically; this is the intended reading order — each 
 | 02 — Chain Rule, Backprop & Autodiff | backprop as chain rule, computational graphs, vanishing gradients | ⭐ |
 | 03 — Optimization: GD & Convexity | gradient descent, learning rate dynamics, convexity, Lagrange multipliers | |
 
-## 3. Statistics
-| Notebook | Covers | Yield |
-|---|---|---|
-| 01 — Probability Foundations & Bayes | joint/marginal/conditional probability, Bayes' theorem, independence vs. correlation | |
-| 02 — Distributions, MLE & MAP | CLT, MLE, MAP, the MAP-to-regularization connection | ⭐ |
-| 03 — Hypothesis Testing & Bias-Variance | p-values, confidence intervals, bootstrap, bias-variance decomposition | |
-
-## 4. Information Theory
+## 3. Information Theory
 *(No dedicated coverage in either primary book — follows the standard treatment; noted explicitly in notebook 01.)*
 | Notebook | Covers | Yield |
 |---|---|---|
@@ -81,21 +73,13 @@ The file tree sorts alphabetically; this is the intended reading order — each 
 | 02 — KL Divergence & Mutual Information | KL divergence, forward vs. reverse KL, mutual information vs. correlation | ⭐ |
 | 03 — ML Applications of Entropy | decision tree splits, distillation/temperature scaling, perplexity | |
 
-## 5. Advanced Optimization & Numerical Methods
+## 4. Advanced Optimization & Numerical Methods
 *(Extends Calculus/Statistics beyond primary-book coverage — matrix calculus identities, Newton's method, and Adam follow standard external references, noted per-notebook.)*
 | Notebook | Covers | Yield |
 |---|---|---|
 | 01 — Matrix Calculus, Hessian & Newton's Method | gradient/trace identities, the Hessian, Newton's method derived | |
 | 02 — Adam & Modern Optimizers | momentum → RMSprop → Adam derived and benchmarked, AdamW | ⭐ |
 | 03 — Numerical Stability & Bayesian Foundations | log-sum-exp, softmax overflow, LLN vs. CLT, Bayesian sequential updating | |
-
-**Cross-references worth tracing deliberately during revision**, since they are what make this a chapter and not 15 unrelated notebooks:
-- PCA (Linear Algebra 03) is re-derived via gradients in Calculus 02, and its Hessian/curvature reading gets a second pass in Advanced Optimization 01.
-- The softmax + cross-entropy gradient (Calculus 02) is explained information-theoretically in Information Theory 01, and its numerical failure mode (overflow) is fixed in Advanced Optimization 03.
-- MAP's connection to L2 regularization (Statistics 02) is the same shrinkage idea behind AdamW's decoupled weight decay (Advanced Optimization 02).
-- The `Y=X²` "uncorrelated but dependent" example (Statistics 01) is revisited with mutual information (Information Theory 02).
-- Bayes' theorem (Statistics 01) is extended to sequential/Bayesian updating (Advanced Optimization 03).
-
 ---
 
 # Repository Structure
@@ -111,11 +95,6 @@ Mathematical Foundations/
 │   ├── 01-differentiation-gradients-jacobians.{md,ipynb}
 │   ├── 02-chain-rule-backprop-autodiff.{md,ipynb}                     ⭐
 │   ├── 03-optimization-gradient-descent-convexity.{md,ipynb}
-│   └── figures/
-├── Statistics/
-│   ├── 01-probability-foundations-bayes.{md,ipynb}
-│   ├── 02-distributions-mle-map.{md,ipynb}                            ⭐
-│   ├── 03-hypothesis-testing-bias-variance.{md,ipynb}
 │   └── figures/
 ├── Information Theory/
 │   ├── 01-entropy-cross-entropy.{md,ipynb}
@@ -150,12 +129,6 @@ The one line per topic worth being able to write from memory, unaided.
 - Gradient descent: `x_{t+1} = x_t - lr·∇f(x_t)`
 - Softmax + cross-entropy gradient: `∂L/∂logits = softmax(logits) - one_hot(y)`
 - Lagrangian (constrained optimization): `L(x,λ) = f(x) - λg(x)`, optimum where `∇f = λ∇g`
-
-**Statistics**
-- Bayes' theorem: `P(H|E) = P(E|H)·P(H) / P(E)`
-- MLE: `argmax_θ P(data|θ)`
-- MAP: `argmax_θ P(data|θ)·P(θ)` — MAP with a Gaussian prior on weights = ridge regression
-- Bias-variance: `Expected Error = Bias² + Variance + Irreducible Noise`
 
 **Information Theory**
 - Entropy: `H(p) = -Σ p(x)·log p(x)`

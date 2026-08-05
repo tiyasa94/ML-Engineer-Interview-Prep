@@ -3,6 +3,8 @@
 > Primary Roadmap: **NeetCode Roadmap**
 > [https://neetcode.io/roadmap]
 
+> Reference Book: [https://drive.google.com/file/d/13BF_ZF1YErFqrH9ODgR0p0oLkx26rMzW/view] 
+
 > Goal: Master Data Structures & Algorithms for Machine Learning Engineer and Software Engineer interviews at top tech companies (NVIDIA, Google, Meta, Apple, Microsoft, Amazon, OpenAI, Anthropic).
 
 ---
@@ -100,35 +102,51 @@ Mock interviews, timed mixed-topic sets, weak-area revision, company-specific pr
 
 # Repository Structure
 
-Same spirit as `Mathematical Foundations/` and `Python & DSA/`: one folder per topic, problems inside as individual notebooks, each following the same fixed template so the format itself becomes a habit.
+Same spirit as `Mathematical Foundations/` and `Python & DSA/`: one folder per **phase** (not per topic), with each topic's theory `.md` living at the top level of that phase folder — flat within a phase, not nested per-topic. Phase 0 additionally pairs each `.md` with a matching `.ipynb` refresher notebook. Reference PDFs/guides and the roadmap itself live at the repo root.
 
 ```
-DSA/
-├── 00-big-o-and-python-toolkit/
-├── 01-arrays-hashing/
-├── 02-two-pointers/
-├── 03-sliding-window/
-├── 04-stack/
-├── 05-binary-search/
-├── 06-linked-list/
-├── 07-trees/
-├── 08-tries/
-├── 09-heap-priority-queue/
-├── 10-backtracking/
-├── 11-graphs/
-├── 12-advanced-graphs/
-├── 13-dp-1d/
-├── 14-intervals/
-├── 15-greedy/
-├── 16-dp-2d/
-├── 17-advanced-trees/
-├── 18-bit-manipulation/
-├── 19-math-geometry/
+Data Structure & Algorithms/
+├── DSA-Roadmap.md
+├── DSA-LeetCode-Guide.pdf
+├── Phase 0/
+│   ├── figures/
+│   ├── 01-big-o-complexity-analysis.md
+│   ├── 01-big-o-complexity-analysis.ipynb
+│   ├── 02-python-dsa-toolkit-refresher.md
+│   ├── 02-python-dsa-toolkit-refresher.ipynb
+│   ├── 03-recursion-fundamentals.md
+│   └── 03-recursion-fundamentals.ipynb
+├── Phase 1/
+│   ├── 01-arrays-hashing.md
+│   ├── 02-two-pointers.md
+│   ├── 03-sliding-window.md
+│   ├── 04-stack.md
+│   └── 05-binary-search.md
+├── Phase 2/
+│   ├── 06-linked-list.md
+│   ├── 07-trees.md
+│   ├── 08-tries.md
+│   └── 09-heap-priority-queue.md
+├── Phase 3/
+│   ├── 10-backtracking.md
+│   ├── 11-graphs.md
+│   └── 12-advanced-graphs.md
+├── Phase 4/
+│   ├── 13-dp-1d.md
+│   ├── 14-intervals.md
+│   ├── 15-greedy.md
+│   └── 16-dp-2d.md
+├── Phase 5/
+│   ├── 17-advanced-trees.md
+│   ├── 18-bits-math.md
+│   └── 19-math-geometry.md
 ├── mock-interviews/
 └── revision-log.md
 ```
 
-Each problem gets its own `.ipynb`, named `NN-problem-slug.ipynb`, with a fixed section order:
+Note the topic numbering runs continuously across phase folders (`01` → `19`), restarting only within Phase 0/1's own local numbering shown above — the phase folder is an organizational grouping by week/timeline, not a per-topic subfolder. Also note the actual filename for Topic 18 is `18-bits-math.md` (covering Bit Manipulation), not `18-bit-manipulation.md`.
+
+Practice problems (once solved) each get their own `.ipynb`, named `NN-problem-slug.ipynb`, with a fixed section order:
 
 1. **Problem Statement** — restated in own words (Framework step 1).
 2. **Constraints & Examples** — including the edge cases worked by hand (steps 2-3).

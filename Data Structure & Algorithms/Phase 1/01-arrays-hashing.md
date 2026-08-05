@@ -2,8 +2,6 @@
 
 **Phase 1 — Foundational Patterns, Topic 1** 
 
-Reference Book: [https://drive.google.com/file/d/13BF_ZF1YErFqrH9ODgR0p0oLkx26rMzW/view] 
-
 Practice problems: NeetCode's Arrays & Hashing section, after this document, not before [https://neetcode.io/roadmap].
 
 This document assumes nothing beyond Phase 0. Read it start to finish once, then use it as the reference to return to before every Arrays & Hashing problem until the patterns are automatic.
