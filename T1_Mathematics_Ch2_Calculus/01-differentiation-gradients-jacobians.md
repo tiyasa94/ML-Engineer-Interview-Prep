@@ -1,6 +1,7 @@
 # 01 - Differentiation, Gradients & Jacobians
 
 **Companion notebook:** [`01-differentiation-gradients-jacobians.ipynb`](./01-differentiation-gradients-jacobians.ipynb)
+
 **Book reference:** 
 *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) [https://drive.google.com/file/d/1KsG9bntb0vD9QrUvHrlR2vqBQSr_V0J9/view] 
 - §5.1–5.4, pp.141–157 (Differentiation of Univariate Functions, Partial Differentiation and Gradients, Gradients of Vector-Valued Functions, Gradients of Matrices)
