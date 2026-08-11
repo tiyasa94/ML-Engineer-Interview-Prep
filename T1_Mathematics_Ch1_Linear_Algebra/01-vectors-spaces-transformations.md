@@ -1,6 +1,7 @@
 # 01 - Vectors, Spaces & Linear Transformations
 
 **Companion code:** [`01-vectors-spaces-transformations.ipynb`](./01-vectors-spaces-transformations.ipynv)
+
 **Book references:**
 - *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) (https://drive.google.com/file/d/1KsG9bntb0vD9QrUvHrlR2vqBQSr_V0J9/view) 
 - §2.1–2.3, pp.19–34 (Systems of Linear Equations, Matrices, Solving Systems of Linear Equations)
