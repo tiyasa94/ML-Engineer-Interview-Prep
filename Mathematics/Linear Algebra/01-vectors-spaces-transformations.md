@@ -2,9 +2,21 @@
 
 **Companion code:** [`01-vectors-spaces-transformations.ipynb`](./01-vectors-spaces-transformations.ipynv)
 **Book references:**
-- *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) (https://drive.google.com/file/d/1KsG9bntb0vD9QrUvHrlR2vqBQSr_V0J9/view) - §2.1–2.3, pp.19–34 (Systems of Linear Equations, Matrices, Solving Systems of Linear Equations) and §2.4–2.8, pp.35–63 (Vector Spaces, Linear Independence, Basis and Rank, Linear Mappings, Affine Spaces)
+- *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) (https://drive.google.com/file/d/1KsG9bntb0vD9QrUvHrlR2vqBQSr_V0J9/view) 
+- §2.1–2.3, pp.19–34 (Systems of Linear Equations, Matrices, Solving Systems of Linear Equations)
+- §2.4–2.8, pp.35–63 (Vector Spaces, Linear Independence, Basis and Rank, Linear Mappings, Affine Spaces)
 
 ---
+## Introduction
+Linear algebra is the study of vectors and certain algebra rules to manipulate vectors. In general, vectors are special objects that can be added together and multiplied by scalars to produce another object of the same kind. From an abstract mathematical viewpoint, any object that satisfies these two properties can be considered a vector. Here are some examples of such vector objects:
+- Geometric vectors
+- Polynomials
+- Audio signals
+- Elements of Rn
+
+![Different Vector Types](./book_figures/different_vector_types.png)
+
+
 
 ## The one idea to actually internalize
 

@@ -8,7 +8,11 @@ A 6-month, project-based prep repo for ML Engineer interviews in the current job
 - [x] **Mathematics**  ✅
 - [x] **Python** ✅
 - [x] **Statistics** ✅
+<<<<<<< Updated upstream
 - [ ] SQL
+=======
+- [x] **Database Management System** ✅
+>>>>>>> Stashed changes
 - [ ] Classical ML - regression, tree ensembles, SVMs, clustering, feature engineering
 - [ ] Deep Learning - neural nets from scratch, CNNs, RNNs, training dynamics
 - [ ] MLOps & Deployment - serving, monitoring, CI/CD, distributed training
@@ -45,5 +49,5 @@ jupyter notebook
 - *Information Theory, Inference, and Learning Algorithms* (MacKay) [https://drive.google.com/file/d/1_20b5q4IDgpDnUr_oKrKgWyFmi8sTeVJ/view]
 - *Introduction to Algorithms* (CORMEN, The MIT Press) [https://drive.google.com/file/d/13BF_ZF1YErFqrH9ODgR0p0oLkx26rMzW/view]
 - *Probabilistic Machine Learning* (Murphy, The MIT Press) [https://drive.google.com/file/d/16cJoJ8ygVrXTr8jl3wKbSsfYx2_gnioh/view]
-
+- *DATABASE SYSTEMS* (Ullman, Pearson) [https://drive.google.com/file/d/1v4h_lUymbC-bVa4WhYt8dvQDOxaBBIBz/view]
 
