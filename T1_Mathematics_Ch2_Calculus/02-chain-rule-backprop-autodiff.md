@@ -3,6 +3,7 @@
 **The single highest-interview-yield notebook in the Calculus chapter.** "Derive backprop" or "explain how backprop works" is one of the most commonly asked ML questions, at every level of seniority.
 
 **Companion notebook:** [`02-chain-rule-backprop-autodiff.ipynb`](./02-chain-rule-backprop-autodiff.ipynb) 
+
 **Book reference:** 
 *Mathematics for Machine Learning* (Deisenroth, Faisal, Ong) [https://drive.google.com/file/d/1KsG9bntb0vD9QrUvHrlR2vqBQSr_V0J9/view]
 
