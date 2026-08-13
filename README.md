@@ -1,37 +1,6 @@
 # ML Engineer Interview Prep
 
-A 6-month, project-based prep repo for ML Engineer interviews in the current job market - math foundations through classical ML, deep learning, NLP/LLMs, MLOps, and system design, built to be genuinely interview-ready, not just "read about it once."
-
-## Progress
-
-- [x] **Data Structure & Algorithms** ✅
-- [x] **Mathematics**  ✅
-- [x] **Python** ✅
-- [x] **Statistics** ✅
-<<<<<<< Updated upstream
-- [ ] SQL
-=======
-- [x] **Database Management System** ✅
->>>>>>> Stashed changes
-- [ ] Classical ML - regression, tree ensembles, SVMs, clustering, feature engineering
-- [ ] Deep Learning - neural nets from scratch, CNNs, RNNs, training dynamics
-- [ ] MLOps & Deployment - serving, monitoring, CI/CD, distributed training
-- [ ] System Design - ML system design case studies, estimation
-- [ ] NLP & LLMs / GenAI - transformers, fine-tuning, RAG, agents, evaluation
-- [ ] Interview Intensive - mock interviews, behavioral prep, portfolio polish, applications
-
-## Repository structure
-
-```
-ML-Engineer-Interview-Prep/
-├── Data Structure & Algorithms/
-├── Mathematics/
-├── Python/
-├── Statistics/
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
+A 6-month, project-based prep repo for ML Engineer interviews.
 
 ## Setup
 
