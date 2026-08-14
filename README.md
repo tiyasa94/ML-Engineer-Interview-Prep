@@ -1,6 +1,6 @@
 # ML Engineer Interview Prep
 
-A 6-month, project-based prep repo for ML Engineer interviews.
+A 6-month prepration roadmap for MLE roles.
 
 ## Setup
 
